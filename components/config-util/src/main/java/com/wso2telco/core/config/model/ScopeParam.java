@@ -28,9 +28,24 @@ public class ScopeParam {
     private msisdnMismatchResultTypes msisdnMismatchResult;
     private heFailureResults heFailureResult;
     private String scope;
+    private int scope_id;
+    private boolean isConsentPage;
+    private String description;
 
 
-    public List<LoginHintFormatDetails> getLoginHintFormat() {
+    public boolean isConsentPage() {
+		return isConsentPage;
+	}
+	public void setConsentPage(boolean isConsentPage) {
+		this.isConsentPage = isConsentPage;
+	}
+	public int getScope_id() {
+		return scope_id;
+	}
+	public void setScope_id(int scope_id) {
+		this.scope_id = scope_id;
+	}
+	public List<LoginHintFormatDetails> getLoginHintFormat() {
         return loginHintFormat;
     }
     public boolean isLoginHintMandatory() {
@@ -75,4 +90,12 @@ public class ScopeParam {
     public void setTncVisible(boolean isTncVisible) {
         this.isTncVisible = isTncVisible;
     }
+    
+	public String getDescription() {
+		return description;
+	}
+	
+	public void setDescription(String description) {
+		this.description = description;
+	}
 }
